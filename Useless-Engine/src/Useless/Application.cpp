@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Application.h"
 
-namespace UselessEngine {
+namespace Useless {
     Application::Application() {
 
     }

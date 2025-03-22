@@ -7,7 +7,7 @@
 
 #include "Core.h"
 
-namespace UselessEngine {
+namespace Useless {
 
     class UE_API Application{
     public:

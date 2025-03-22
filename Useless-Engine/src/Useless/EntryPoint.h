@@ -6,8 +6,9 @@
 #define ENTRYPOINT_H
 #include <cstdio>
 
+
 #ifdef UE_PLATFORM_WINDOWS
-extern UselessEngine::Application* UselessEngine::CreateApplication();
+extern Useless::Application* Useless::CreateApplication();
 int main(int arc, char** argv){
     printf("Useless Engine Started\n");
     auto app = UselessEngine::CreateApplication();
@@ -18,10 +19,17 @@ int main(int arc, char** argv){
     return 0;
 }
 #elif defined(UE_PLATFORM_MACOS)
-extern UselessEngine::Application* UselessEngine::CreateApplication();
+
+extern Useless::Application* Useless::CreateApplication();
+
 int main(int argc, char** argv) {
     printf("Useless Engine Started\n");
-    auto app = UselessEngine::CreateApplication();
+
+    Useless::Log::Init();
+    UE_CORE_INFO("Core Logger Initialized");
+    UE_INFO("Client Logger Initialized");
+
+    auto app = Useless::CreateApplication();
     if (app) {
         app->Run();
         delete app;

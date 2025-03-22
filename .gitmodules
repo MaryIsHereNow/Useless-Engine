@@ -1,0 +1,3 @@
+[submodule "Useless-Engine/vendor/spdlog"]
+	path = Useless-Engine/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git

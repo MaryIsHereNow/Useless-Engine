@@ -7,6 +7,7 @@
 
 //给使用Useless的app使用
 #include "Useless/Application.h"
+#include "Useless/Log.h"
 
 //---入口点----
 #include "Useless/EntryPoint.h"

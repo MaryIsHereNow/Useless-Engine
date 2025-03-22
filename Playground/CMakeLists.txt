@@ -29,4 +29,5 @@ target_compile_definitions(Playground PRIVATE UE_PLATFORM_MACOS)
 # 添加全局头文件搜索路径
 include_directories(
         ${CMAKE_SOURCE_DIR}/../Useless-Engine/src/
+        ${CMAKE_SOURCE_DIR}/../Useless-Engine/vendor/spdlog/include
 )
