@@ -4,7 +4,6 @@
 
 #ifndef ENTRYPOINT_H
 #define ENTRYPOINT_H
-#include <cstdio>
 
 
 #ifdef UE_PLATFORM_WINDOWS

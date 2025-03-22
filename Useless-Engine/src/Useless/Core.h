@@ -1,9 +1,8 @@
 //
 // Created by 孙中行 on 25-3-21.
 //
+#pragma once
 
-#ifndef CORE_H
-#define CORE_H
 
 //windows平台
 #ifdef UE_PLATFORM_WINDOWS
@@ -21,7 +20,5 @@
         #define UE_API
     #endif
 
-
 #endif
 
-#endif //CORE_H

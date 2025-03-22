@@ -1,14 +1,12 @@
 //
 // Created by 孙中行 on 25-3-21.
 //
-
-#ifndef APPLICATION_H
-#define APPLICATION_H
+#pragma once
 
 #include "Core.h"
 
 namespace Useless {
-
+    //Application类
     class UE_API Application{
     public:
         Application();
@@ -20,5 +18,3 @@ namespace Useless {
     //在客户端中定义
     Application* CreateApplication();
 }
-
-#endif //APPLICATION_H

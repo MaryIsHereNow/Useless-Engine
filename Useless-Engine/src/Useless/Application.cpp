@@ -2,7 +2,7 @@
 // Created by 孙中行 on 25-3-21.
 //
 
-#include <iostream>
+#include "uepch.h"
 #include "Application.h"
 
 namespace Useless {
@@ -16,6 +16,4 @@ namespace Useless {
     void Application::Run() {
         while (true) { }
     }
-
-
 }

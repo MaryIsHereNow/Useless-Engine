@@ -1,16 +1,13 @@
 //
 // Created by 孙中行 on 25-3-22.
 //
+#pragma once
 
-#ifndef LOG_H
-#define LOG_H
-
-#include <memory>
 #include "Core.h"
 #include "spdlog/spdlog.h"
 
 namespace Useless{
-    ///日志类
+    ///日志类 提供控制台输出的API
     class UE_API Log {
     public:
         static void Init();
@@ -35,5 +32,3 @@ namespace Useless{
 #define UE_TRACE(...) ::Useless::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define UE_DEBUG(...) ::Useless::Log::GetClientLogger()->debug(__VA_ARGS__)
 #define UE_FATAL(...) ::Useless::Log::GetClientLogger()->fatal(__VA_ARGS__)
-
-#endif //LOG_H

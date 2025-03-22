@@ -15,7 +15,13 @@ file(GLOB_RECURSE SOURCES "src/*.cpp")
 add_library(Useless-Engine SHARED ${SOURCES})
 
 # 添加头文件目录
-include_directories(vendor/spdlog/include)
+include_directories(vendor/spdlog/include
+        src/
+)
 
 #添加宏定义
 target_compile_definitions(Useless-Engine PRIVATE UE_PLATFORM_MACOS UE_BUILD_DLL)
+
+# 设置预编译头文件
+set(CMAKE_CXX_PRECOMPILE_HEADERS ON)
+target_precompile_headers(Useless-Engine PRIVATE  ${CMAKE_SOURCE_DIR}/src/Useless/uepch.h)
