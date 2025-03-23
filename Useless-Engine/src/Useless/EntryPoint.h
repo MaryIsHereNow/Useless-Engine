@@ -25,8 +25,8 @@ int main(int argc, char** argv) {
     printf("Useless Engine Started\n");
 
     Useless::Log::Init();
-    UE_CORE_INFO("Core Logger Initialized");
-    UE_INFO("Client Logger Initialized");
+    UE_LOG_CORE_INFO("Core Logger Initialized");
+    UE_LOG_INFO("Client Logger Initialized");
 
     auto app = Useless::CreateApplication();
     if (app) {

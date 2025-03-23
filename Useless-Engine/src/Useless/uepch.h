@@ -20,4 +20,5 @@
 #ifdef UE_PLATFORM_WINDOWS
     #include <Windows.h>
 #elif defined(UE_PLATFORM_MACOS)
+    //do mac stuff
 #endif

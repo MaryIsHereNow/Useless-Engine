@@ -19,16 +19,16 @@ namespace Useless{
     };
 }
 
-#define UE_CORE_ERROR(...) ::Useless::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define UE_CORE_WARN(...) ::Useless::Log::GetCoreLogger()->warn(__VA_ARGS__)
-#define UE_CORE_INFO(...) ::Useless::Log::GetCoreLogger()->info(__VA_ARGS__)
-#define UE_CORE_TRACE(...) ::Useless::Log::GetCoreLogger()->trace(__VA_ARGS__)
-#define UE_CORE_DEBUG(...) ::Useless::Log::GetCoreLogger()->debug(__VA_ARGS__)
-#define UE_CORE_FATAL(...) ::Useless::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define UE_LOG_CORE_ERROR(...) ::Useless::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define UE_LOG_CORE_WARN(...) ::Useless::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define UE_LOG_CORE_INFO(...) ::Useless::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define UE_LOG_CORE_TRACE(...) ::Useless::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define UE_LOG_CORE_DEBUG(...) ::Useless::Log::GetCoreLogger()->debug(__VA_ARGS__)
+#define UE_LOG_CORE_FATAL(...) ::Useless::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
-#define UE_ERROR(...) ::Useless::Log::GetClientLogger()->error(__VA_ARGS__)
-#define UE_WARN(...) ::Useless::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define UE_INFO(...) ::Useless::Log::GetClientLogger()->info(__VA_ARGS__)
-#define UE_TRACE(...) ::Useless::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define UE_DEBUG(...) ::Useless::Log::GetClientLogger()->debug(__VA_ARGS__)
-#define UE_FATAL(...) ::Useless::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define UE_LOG_ERROR(...) ::Useless::Log::GetClientLogger()->error(__VA_ARGS__)
+#define UE_LOG_WARN(...) ::Useless::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define UE_LOG_INFO(...) ::Useless::Log::GetClientLogger()->info(__VA_ARGS__)
+#define UE_LOG_TRACE(...) ::Useless::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define UE_LOG_DEBUG(...) ::Useless::Log::GetClientLogger()->debug(__VA_ARGS__)
+#define UE_LOG_FATAL(...) ::Useless::Log::GetClientLogger()->fatal(__VA_ARGS__)
