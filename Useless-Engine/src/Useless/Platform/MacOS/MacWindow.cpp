@@ -52,6 +52,18 @@ namespace Useless {
         }
         m_Window = glfwCreateWindow(static_cast<int>(properties.Width), static_cast<int>(properties.Height), m_Data.Title.c_str(), nullptr, nullptr);
         glfwMakeContextCurrent(m_Window);
+        if (!m_Window) {
+            UE_LOG_CORE_ERROR("Failed to create GLFW window");
+            glfwTerminate();
+            __builtin_trap();
+        }
+
+        int status = gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
+        if(!status){
+            UE_LOG_CORE_ERROR("failed to init Glad");
+            __builtin_trap();
+        }
+
         glfwSetWindowUserPointer(m_Window, &m_Data);
         SetVSync(true);
 
@@ -113,7 +125,7 @@ namespace Useless {
             MouseScrolledEvent event((float)xOffset,(float)yOffset);
             data.EventCallback(event);
         });
-        //6.光标位置事件
+        //6.光标位置事件回调
         glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xPos, double yPos) {
             WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
             MouseMovedEvent event((float)xPos,(float)yPos);

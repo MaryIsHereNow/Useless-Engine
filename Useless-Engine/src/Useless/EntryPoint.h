@@ -1,10 +1,7 @@
 //
 // Created by 孙中行 on 25-3-21.
 //
-
-#ifndef ENTRYPOINT_H
-#define ENTRYPOINT_H
-
+#pragma once
 
 #ifdef UE_PLATFORM_WINDOWS
 extern Useless::Application* Useless::CreateApplication();
@@ -36,5 +33,3 @@ int main(int argc, char** argv) {
     return 0;
 }
 #endif
-
-#endif //ENTRYPOINT_H

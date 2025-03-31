@@ -5,6 +5,8 @@
 
 #include "Core.h"
 #include "Window.h"
+#include "Layer.h"
+#include "LayerStack.h"
 #include "Events/AppEvent.h"
 
 namespace Useless {
@@ -17,11 +19,15 @@ namespace Useless {
         void Run();
         void OnEvent(Event& event);
 
-    private:
-        bool OnWindowClose(WindowCloseEvent &event);
+        void PushLayer(Layer* layer);
+        void PushOverlay(Layer* layer);
 
-        std::unique_ptr<Window> m_Window;
+    private:
         bool m_Running = true;
+        std::unique_ptr<Window> m_Window;
+        LayerStack m_LayerStack;
+
+        bool OnWindowClose(WindowCloseEvent &event);
     };
 
     //在客户端中定义

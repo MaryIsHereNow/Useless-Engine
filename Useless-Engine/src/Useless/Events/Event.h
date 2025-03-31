@@ -41,6 +41,8 @@ namespace Useless {
         virtual int GetCategoryFlags() const = 0;       //事件分类
         virtual std::string ToString() const { return GetName();}
 
+        virtual bool IsHandled() const { return m_Handled;}
+
         ///判断是否属于某个事件分类的方法
         inline bool IsInCategory(EventCategory category) { return GetCategoryFlags() & static_cast<int>(category); }
     protected:
